@@ -1,0 +1,214 @@
+[gd_scene load_steps=15 format=3 uid="uid://xc40060xvwho"]
+
+[ext_resource type="Script" path="res://Bermain/content_angka1.gd" id="1_1cdf2"]
+[ext_resource type="Theme" uid="uid://cjqyyjxxa2fyl" path="res://themes/new_theme.tres" id="1_kwsr1"]
+[ext_resource type="FontFile" uid="uid://cowdkyyhdjvg6" path="res://Assets/GUI/grass/Font for text/Gluten/static/Gluten-ExtraBold.ttf" id="2_vl0nf"]
+[ext_resource type="Texture2D" uid="uid://gvkdwku82ma1" path="res://Assets/apple.png" id="4_07yjt"]
+[ext_resource type="Texture2D" uid="uid://ccimkadpakuu2" path="res://Assets/GUI/Math Game Assets/Timer/Timer.png" id="5_o0wsm"]
+[ext_resource type="PackedScene" uid="uid://hurw5akhp8qn" path="res://Object/object_container.tscn" id="6_3x400"]
+[ext_resource type="Texture2D" uid="uid://b7ny4gdifv7u7" path="res://Assets/GUI/grass/Bar/button long.png" id="7_5qfqu"]
+[ext_resource type="Theme" uid="uid://yaamyeiov35p" path="res://themes/content_angka2.tres" id="7_jy58g"]
+[ext_resource type="Texture2D" uid="uid://bn2ongnyr1cc1" path="res://Assets/BnB!.png" id="7_p5ohi"]
+[ext_resource type="AudioStream" uid="uid://nivr0mmp0ejj" path="res://Assets/sound/correct.wav" id="8_jovwb"]
+[ext_resource type="AudioStream" uid="uid://dmar8q4lx441c" path="res://Assets/sound/wrong.wav" id="9_2wumi"]
+[ext_resource type="Theme" uid="uid://c7sd3381we7ys" path="res://themes/content_angka1.tres" id="9_mvd0d"]
+[ext_resource type="AudioStream" uid="uid://bqabvj1pe5qnh" path="res://Assets/sound/benar.wav" id="9_tpwrk"]
+[ext_resource type="AudioStream" uid="uid://x76ti8eyxsw1" path="res://Assets/sound/o ow.wav" id="11_iout7"]
+
+[node name="Content" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_1cdf2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 316.0
+offset_top = 91.0
+offset_right = 1131.0
+offset_bottom = 624.0
+theme_override_constants/separation = 16
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 11
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture = ExtResource("5_o0wsm")
+expand_mode = 5
+
+[node name="label" type="ProgressBar" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("9_mvd0d")
+max_value = 20.0
+value = 10.0
+fill_mode = 3
+show_percentage = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Panel" type="PanelContainer" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(770, 370)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("9_mvd0d")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 25
+
+[node name="Pertanyaan" type="RichTextLabel" parent="HBoxContainer/VBoxContainer/Panel/MarginContainer"]
+clip_contents = false
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_constants/outline_size = -117
+theme_override_fonts/normal_font = ExtResource("2_vl0nf")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 2
+bbcode_enabled = true
+text = "[center]ADA BERAPA BUAH?[/center]"
+scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/Panel/MarginContainer"]
+visible = false
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_constants/separation = 9
+alignment = 1
+
+[node name="Sprite2D" type="TextureRect" parent="HBoxContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_07yjt")
+expand_mode = 2
+
+[node name="Sprite2D2" type="TextureRect" parent="HBoxContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_07yjt")
+expand_mode = 2
+
+[node name="Sprite2D3" type="TextureRect" parent="HBoxContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_07yjt")
+expand_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/VBoxContainer/Panel/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="object_container" parent="HBoxContainer/VBoxContainer/Panel/MarginContainer" instance=ExtResource("6_3x400")]
+layout_mode = 2
+
+[node name="JbuttonContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 10
+theme = ExtResource("1_kwsr1")
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="jbutton1" type="Button" parent="HBoxContainer/VBoxContainer/JbuttonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../jbutton3")
+focus_neighbor_right = NodePath("../jbutton2")
+focus_next = NodePath("../jbutton2")
+focus_previous = NodePath("../jbutton3")
+theme = ExtResource("1_kwsr1")
+theme_override_font_sizes/font_size = 100
+toggle_mode = true
+text = "5"
+icon_alignment = 1
+expand_icon = true
+
+[node name="jbutton2" type="Button" parent="HBoxContainer/VBoxContainer/JbuttonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("7_jy58g")
+theme_override_font_sizes/font_size = 100
+toggle_mode = true
+text = "3"
+
+[node name="Logo" type="TextureRect" parent="HBoxContainer/VBoxContainer/JbuttonContainer/jbutton2"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.507
+anchor_right = 0.507
+offset_left = -637.736
+offset_top = -307.0
+offset_right = -238.736
+offset_bottom = -66.0
+texture = ExtResource("7_p5ohi")
+expand_mode = 1
+
+[node name="jbutton3" type="Button" parent="HBoxContainer/VBoxContainer/JbuttonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_right = NodePath("../jbutton1")
+focus_next = NodePath("../jbutton1")
+theme = ExtResource("9_mvd0d")
+theme_override_font_sizes/font_size = 100
+toggle_mode = true
+text = "2"
+icon_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/JbuttonContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("7_5qfqu")
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/VBoxContainer/JbuttonContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("7_5qfqu")
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="HBoxContainer/VBoxContainer/JbuttonContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("7_5qfqu")
+stretch_mode = 0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_jovwb")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_2wumi")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_tpwrk")
+pitch_scale = 1.3
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_iout7")
+pitch_scale = 1.34
+
+[node name="LevelTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/JbuttonContainer/jbutton1" to="." method="tombol1_ditekan"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/JbuttonContainer/jbutton2" to="." method="tombol2_ditekan"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/JbuttonContainer/jbutton3" to="." method="tombol3_ditekan"]
+[connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]

@@ -1,0 +1,262 @@
+[gd_scene load_steps=15 format=3 uid="uid://illc4x0ru6lv"]
+
+[ext_resource type="Script" path="res://Bermain/Content_Huruf.gd" id="1_mnyvj"]
+[ext_resource type="Texture2D" uid="uid://ccimkadpakuu2" path="res://Assets/GUI/Math Game Assets/Timer/Timer.png" id="2_61dw4"]
+[ext_resource type="FontFile" uid="uid://cowdkyyhdjvg6" path="res://Assets/GUI/grass/Font for text/Gluten/static/Gluten-ExtraBold.ttf" id="3_f6fus"]
+[ext_resource type="Theme" uid="uid://c7sd3381we7ys" path="res://themes/content_angka1.tres" id="3_ie75w"]
+[ext_resource type="PackedScene" uid="uid://hurw5akhp8qn" path="res://Object/object_container.tscn" id="4_lebi5"]
+[ext_resource type="Texture2D" uid="uid://gvkdwku82ma1" path="res://Assets/apple.png" id="4_xx7as"]
+[ext_resource type="FontFile" uid="uid://bn4v25tysqslj" path="res://Assets/GUI/grass/Font for text/Gluten/static/Gluten-Bold.ttf" id="5_bvrc1"]
+[ext_resource type="Texture2D" uid="uid://b7ny4gdifv7u7" path="res://Assets/GUI/grass/Bar/button long.png" id="7_45qm7"]
+[ext_resource type="Theme" uid="uid://cjqyyjxxa2fyl" path="res://themes/new_theme.tres" id="8_x5f64"]
+[ext_resource type="Theme" uid="uid://yaamyeiov35p" path="res://themes/content_angka2.tres" id="9_1mtjx"]
+[ext_resource type="AudioStream" uid="uid://nivr0mmp0ejj" path="res://Assets/sound/correct.wav" id="11_ly4ms"]
+[ext_resource type="AudioStream" uid="uid://dmar8q4lx441c" path="res://Assets/sound/wrong.wav" id="12_glbaw"]
+[ext_resource type="AudioStream" uid="uid://bqabvj1pe5qnh" path="res://Assets/sound/benar.wav" id="13_tsjyr"]
+[ext_resource type="AudioStream" uid="uid://x76ti8eyxsw1" path="res://Assets/sound/o ow.wav" id="14_aay8b"]
+
+[node name="ContentHuruf" type="CanvasLayer"]
+script = ExtResource("1_mnyvj")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 91.0
+offset_right = 1131.0
+offset_bottom = 624.0
+theme_override_constants/separation = 16
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 11
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture = ExtResource("2_61dw4")
+expand_mode = 5
+
+[node name="label" type="ProgressBar" parent="Control/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_ie75w")
+max_value = 20.0
+value = 10.0
+fill_mode = 3
+show_percentage = false
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Panel" type="PanelContainer" parent="Control/HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(770, 375)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_ie75w")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/VBoxContainer3/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Pertanyaan" type="RichTextLabel" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+theme_override_colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_fonts/normal_font = ExtResource("3_f6fus")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 2
+bbcode_enabled = true
+text = "[center]HURUF MANA YANG BENAR?[/center]"
+scroll_active = false
+
+[node name="Sprite2D4" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+texture = ExtResource("4_xx7as")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Pertanyaan2" type="RichTextLabel" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+theme_override_colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_fonts/normal_font = ExtResource("5_bvrc1")
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "[center]anu[/center]"
+scroll_active = false
+
+[node name="object_container" parent="Control/HBoxContainer/VBoxContainer3/Panel" instance=ExtResource("4_lebi5")]
+visible = false
+layout_mode = 2
+
+[node name="JbuttonContainer2" type="HBoxContainer" parent="Control/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("8_x5f64")
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="jbutton1" type="Button" parent="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../jbutton3")
+focus_neighbor_right = NodePath("../jbutton2")
+focus_next = NodePath("../jbutton2")
+focus_previous = NodePath("../jbutton3")
+theme = ExtResource("8_x5f64")
+theme_override_font_sizes/font_size = 100
+text = "A"
+icon_alignment = 1
+expand_icon = true
+
+[node name="jbutton2" type="Button" parent="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("9_1mtjx")
+theme_override_font_sizes/font_size = 100
+text = "U"
+
+[node name="jbutton3" type="Button" parent="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_right = NodePath("../jbutton1")
+focus_next = NodePath("../jbutton1")
+theme = ExtResource("3_ie75w")
+theme_override_font_sizes/font_size = 100
+text = "Z"
+icon_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("7_45qm7")
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("7_45qm7")
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("7_45qm7")
+stretch_mode = 0
+
+[node name="JbuttonContainer" type="HBoxContainer" parent="Control"]
+visible = false
+layout_mode = 2
+offset_left = 431.0
+offset_top = 532.0
+offset_right = 1082.0
+offset_bottom = 619.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 3
+theme = ExtResource("8_x5f64")
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="jbutton1" type="Button" parent="Control/JbuttonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "5"
+icon_alignment = 1
+expand_icon = true
+
+[node name="jbutton2" type="Button" parent="Control/JbuttonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "4"
+
+[node name="jbutton3" type="Button" parent="Control/JbuttonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "1"
+icon_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 382.0
+offset_top = 78.0
+offset_right = -45.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Pertanyaan" type="RichTextLabel" parent="Control/VBoxContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/normal_font_size = 45
+theme_override_font_sizes/bold_font_size = 2
+bbcode_enabled = true
+text = "[center] LENGKAPI KATA DIBAWAH[/center]"
+scroll_active = false
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="LevelTimer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_ly4ms")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_glbaw")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_tsjyr")
+pitch_scale = 1.3
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_aay8b")
+pitch_scale = 1.34
+
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2/jbutton1" to="." method="_on_jbutton_1_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2/jbutton2" to="." method="_on_jbutton_2_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2/jbutton3" to="." method="_on_jbutton_3_pressed"]
+[connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]
