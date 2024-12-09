@@ -1,0 +1,341 @@
+[gd_scene load_steps=21 format=3 uid="uid://c1laav61vcvbv"]
+
+[ext_resource type="Script" path="res://Menu/menu.gd" id="1_n22v0"]
+[ext_resource type="Texture2D" uid="uid://bqp0np5317j7d" path="res://Assets/BG/bg.jpg" id="2_yxv4o"]
+[ext_resource type="Texture2D" uid="uid://bu3bvibyxh5gf" path="res://Assets/GUI/Math Game Assets/123 - abc/X2.png" id="3_yoiqj"]
+[ext_resource type="Texture2D" uid="uid://c1gljjyg88fy2" path="res://Assets/GUI/Math Game Assets/123 - abc/X2-PRESSED.png" id="4_rlhe7"]
+[ext_resource type="Texture2D" uid="uid://cuxv00l5g56rd" path="res://Assets/GUI/grass/Menu Buttons/Clear Menu Buttons/Buttons-x.png" id="5_u52h7"]
+[ext_resource type="FontFile" uid="uid://bn4v25tysqslj" path="res://Assets/GUI/grass/Font for text/Gluten/static/Gluten-Bold.ttf" id="6_akya7"]
+[ext_resource type="Texture2D" uid="uid://b7ny4gdifv7u7" path="res://Assets/GUI/grass/Bar/button long.png" id="7_upvls"]
+[ext_resource type="Texture2D" uid="uid://cxqnlealm67go" path="res://Assets/GUI/grass/Bar/button-long-pressed.png" id="8_vtkhg"]
+[ext_resource type="Texture2D" uid="uid://bn2ongnyr1cc1" path="res://Assets/BnB!.png" id="9_o0j8n"]
+[ext_resource type="Texture2D" uid="uid://dl018hi2428v" path="res://Assets/GUI/custom/play.png" id="10_37fco"]
+[ext_resource type="Texture2D" uid="uid://b32ey0tgcgh23" path="res://Assets/GUI/custom/playpressed.png" id="11_sa70w"]
+[ext_resource type="Texture2D" uid="uid://o1o8x3ogjmnp" path="res://Assets/GUI/custom/playhover.png" id="12_mb28b"]
+[ext_resource type="AudioStream" uid="uid://c3kobl3cl44d" path="res://Assets/sound/happy-uplifting-ukulele-kids-short-version-217004.mp3" id="12_s0w1g"]
+[ext_resource type="Theme" uid="uid://c7sd3381we7ys" path="res://themes/content_angka1.tres" id="13_ec4rp"]
+[ext_resource type="Theme" uid="uid://cjqyyjxxa2fyl" path="res://themes/new_theme.tres" id="15_pgbdg"]
+[ext_resource type="FontFile" uid="uid://gbylwftmi3io" path="res://Assets/GUI/Math Game Assets/Eazy Chat/Eazy Chat.ttf" id="16_i1f11"]
+[ext_resource type="Theme" uid="uid://yaamyeiov35p" path="res://themes/content_angka2.tres" id="16_xvhcj"]
+[ext_resource type="AudioStream" uid="uid://car71ygwyfd8" path="res://Assets/sound/bnb.wav" id="18_32l8p"]
+[ext_resource type="AudioStream" uid="uid://db1m0qkomb3w3" path="res://Assets/sound/nama.wav" id="19_iabqb"]
+
+[sub_resource type="FontVariation" id="FontVariation_613cv"]
+base_font = ExtResource("6_akya7")
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_n22v0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0.952941)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yxv4o")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="quit" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -142.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 140.0
+grow_horizontal = 0
+focus_neighbor_left = NodePath("../HBoxContainer/Button2")
+focus_neighbor_right = NodePath("../HBoxContainer/Button1")
+focus_neighbor_bottom = NodePath("../HBoxContainer/Button2")
+texture_normal = ExtResource("3_yoiqj")
+texture_pressed = ExtResource("4_rlhe7")
+texture_focused = ExtResource("5_u52h7")
+stretch_mode = 0
+
+[node name="Popup" type="PopupPanel" parent="CanvasLayer/Control"]
+initial_position = 2
+size = Vector2i(653, 518)
+unresizable = false
+min_size = Vector2i(200, 100)
+content_scale_mode = 1
+content_scale_aspect = 1
+
+[node name="Logo" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.507
+anchor_right = 0.507
+offset_left = -164.064
+offset_top = 40.0
+offset_right = 161.936
+offset_bottom = 237.0
+texture = ExtResource("9_o0j8n")
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = 41.0
+offset_right = 121.0
+offset_bottom = 277.0
+grow_horizontal = 2
+grow_vertical = 2
+disabled = true
+texture_normal = ExtResource("10_37fco")
+texture_pressed = ExtResource("11_sa70w")
+texture_hover = ExtResource("12_mb28b")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505
+anchor_top = 0.549
+anchor_right = 0.505
+anchor_bottom = 0.549
+offset_left = -341.76
+offset_top = -35.752
+offset_right = 360.24
+offset_bottom = 220.248
+theme_override_constants/separation = 90
+alignment = 1
+
+[node name="Button2" type="TextureButton" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("7_upvls")
+texture_pressed = ExtResource("8_vtkhg")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/HBoxContainer/Button2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -22.0
+offset_right = 94.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_fonts/normal_font = ExtResource("6_akya7")
+theme_override_font_sizes/normal_font_size = 38
+text = "BELAJAR"
+
+[node name="Button1" type="TextureButton" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("7_upvls")
+texture_pressed = ExtResource("8_vtkhg")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/HBoxContainer/Button1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -22.0
+offset_right = 94.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_fonts/normal_font = ExtResource("6_akya7")
+theme_override_font_sizes/normal_font_size = 38
+text = "BERMAIN"
+
+[node name="LabelNama" type="HBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = -61.0
+offset_right = 191.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Control/LabelNama"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("13_ec4rp")
+placeholder_text = "Masukkan namamu"
+caret_blink = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/LabelNama"]
+visible = false
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 2
+offset_left = 411.0
+offset_top = 334.0
+offset_right = 452.0
+offset_bottom = 368.0
+theme_override_colors/font_color = Color(0.878431, 0.172549, 0.172549, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("16_i1f11")
+theme_override_font_sizes/font_size = 22
+
+[node name="Popup2" type="Panel" parent="CanvasLayer/Control"]
+visible = false
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -200.0
+offset_right = 320.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("13_ec4rp")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/Popup2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="vbox" type="VBoxContainer" parent="CanvasLayer/Control/Popup2/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("15_pgbdg")
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Popup2/MarginContainer/vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = SubResource("FontVariation_613cv")
+theme_override_font_sizes/font_size = 45
+text = "YAKIN MAU KELUAR?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/Popup2/MarginContainer/vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/Popup2/MarginContainer/vbox"]
+layout_mode = 2
+theme_override_constants/separation = 41
+alignment = 1
+
+[node name="ya" type="Button" parent="CanvasLayer/Control/Popup2/MarginContainer/vbox/HBoxContainer"]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme = ExtResource("16_xvhcj")
+theme_override_font_sizes/font_size = 60
+text = "Ya"
+
+[node name="tidak" type="Button" parent="CanvasLayer/Control/Popup2/MarginContainer/vbox/HBoxContainer"]
+custom_minimum_size = Vector2(250, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("13_ec4rp")
+theme_override_font_sizes/font_size = 60
+text = "Tidak"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+clip_contents = false
+anchors_preset = -1
+anchor_left = 0.523
+anchor_right = 0.523
+offset_left = 439.0
+offset_top = 103.0
+offset_right = 771.0
+offset_bottom = 259.0
+theme_override_colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_constants/outline_size = 45
+theme_override_fonts/normal_font = ExtResource("6_akya7")
+theme_override_font_sizes/normal_font_size = 123
+bbcode_enabled = true
+text = "[center]BnB![/center]"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_s0w1g")
+volume_db = -10.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_32l8p")
+volume_db = 5.0
+pitch_scale = 1.32
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_iabqb")
+volume_db = 5.0
+pitch_scale = 1.36
+
+[connection signal="pressed" from="CanvasLayer/Control/quit" to="." method="_on_quit_pressed" flags=18]
+[connection signal="pressed" from="CanvasLayer/Control/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/Button1" to="." method="_on_texture_button_pressed"]
+[connection signal="text_changed" from="CanvasLayer/Control/LabelNama/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_submitted" from="CanvasLayer/Control/LabelNama/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="CanvasLayer/Control/Popup2/MarginContainer/vbox/HBoxContainer/ya" to="." method="_on_ya_pressed" flags=18]
+[connection signal="pressed" from="CanvasLayer/Control/Popup2/MarginContainer/vbox/HBoxContainer/tidak" to="." method="_on_tidak_pressed" flags=18]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

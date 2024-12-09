@@ -1,0 +1,535 @@
+[gd_scene load_steps=34 format=3 uid="uid://bhdvd2d11etcx"]
+
+[ext_resource type="Script" path="res://Menu/menu_pilihan.gd" id="1_db3o2"]
+[ext_resource type="Texture2D" uid="uid://bvumyfjwhxrl7" path="res://Assets/GUI/grass/Backgound/Background_Yellow.png" id="2_xawga"]
+[ext_resource type="Texture2D" uid="uid://cf2xpsapq01xv" path="res://Assets/GUI/grass/Menu Buttons/Clear Menu Buttons/Grass-Buttons-arrow3.png" id="3_1qn1a"]
+[ext_resource type="Theme" uid="uid://cjqyyjxxa2fyl" path="res://themes/new_theme.tres" id="3_al6ck"]
+[ext_resource type="Texture2D" uid="uid://dtvu5wl0hqhci" path="res://Assets/GUI/grass/Menu Buttons/Clear Menu Buttons/Pressed/Buttons-pressed-arrow3.png" id="4_wpuao"]
+[ext_resource type="FontFile" uid="uid://bn4v25tysqslj" path="res://Assets/GUI/grass/Font for text/Gluten/static/Gluten-Bold.ttf" id="5_mw4rg"]
+[ext_resource type="Texture2D" uid="uid://d6ppolulj7v6" path="res://Assets/GUI/custom/button-huruf.png" id="6_wo44f"]
+[ext_resource type="Theme" uid="uid://c7sd3381we7ys" path="res://themes/content_angka1.tres" id="7_51q8b"]
+[ext_resource type="Texture2D" uid="uid://btngn7irbah41" path="res://Assets/GUI/custom/button-huruf-pressed.png" id="7_bsvpy"]
+[ext_resource type="Texture2D" uid="uid://bsnmosfr481ye" path="res://Assets/GUI/custom/button-huruf-hover.png" id="8_kuo2t"]
+[ext_resource type="Texture2D" uid="uid://n1jjohy4ybry" path="res://Assets/GUI/custom/button_angka.png" id="9_0hwe8"]
+[ext_resource type="Texture2D" uid="uid://caam71g0e6aqx" path="res://Assets/GUI/custom/button_angka_pressed.png" id="10_ca7cs"]
+[ext_resource type="Texture2D" uid="uid://b56tmui4177c2" path="res://Assets/GUI/custom/button_angka_hover.png" id="11_58idf"]
+[ext_resource type="Theme" uid="uid://n8dd1i1ciggi" path="res://themes/font.tres" id="14_qiqex"]
+[ext_resource type="Texture2D" uid="uid://1ajd3n7n25c8" path="res://Assets/GUI/custom/button_bermain1.png" id="15_st614"]
+[ext_resource type="Texture2D" uid="uid://dl35eof6528rq" path="res://Assets/GUI/custom/button_bermain1_pressed.png" id="16_h301p"]
+[ext_resource type="Texture2D" uid="uid://b534gw7x8wx46" path="res://Assets/GUI/custom/button_bermain1_hover.png" id="17_wqltu"]
+[ext_resource type="Texture2D" uid="uid://cp1m4amiddpk5" path="res://Assets/GUI/custom/button_bermain2.png" id="18_2h6pc"]
+[ext_resource type="Texture2D" uid="uid://c16ams5y3nlqn" path="res://Assets/GUI/custom/button_bermain2_pressed.png" id="19_edqjt"]
+[ext_resource type="Texture2D" uid="uid://b3jdvopr7f045" path="res://Assets/GUI/custom/button_bermain2_hover.png" id="20_73neh"]
+[ext_resource type="Texture2D" uid="uid://dftifu73k3go3" path="res://Assets/GUI/custom/button_bermain1_normal.png" id="21_o7214"]
+[ext_resource type="Texture2D" uid="uid://d2eah5khsd0bq" path="res://Assets/GUI/custom/button_bermain3_normal.png" id="22_8cxb1"]
+[ext_resource type="Texture2D" uid="uid://cre48u0o8fkwc" path="res://Assets/GUI/custom/button_bermain3_pressed.png" id="23_af33x"]
+[ext_resource type="Texture2D" uid="uid://cp1ywrbn56cbp" path="res://Assets/GUI/custom/button_bermain3_hover.png" id="24_6vree"]
+[ext_resource type="Texture2D" uid="uid://ca3yc26mm25iw" path="res://Assets/GUI/custom/button_bermain4_normal.png" id="25_r7nhw"]
+[ext_resource type="Texture2D" uid="uid://cwrm0sjy4tsjp" path="res://Assets/GUI/custom/button_bermain4_pressed.png" id="26_rigi0"]
+[ext_resource type="Texture2D" uid="uid://cgv7mgvvnoitm" path="res://Assets/GUI/custom/button_bermain4_hover.png" id="27_8j3xr"]
+[ext_resource type="AudioStream" uid="uid://cwla0sh5ydfyd" path="res://Assets/sound/belajar_angka.wav" id="28_umrqg"]
+[ext_resource type="AudioStream" uid="uid://cmtl4u2vspc55" path="res://Assets/sound/belajar_huruf.wav" id="29_3ij6i"]
+[ext_resource type="AudioStream" uid="uid://b4un0f7occyh4" path="res://Assets/sound/tebak_angka.wav" id="30_bl7m0"]
+[ext_resource type="AudioStream" uid="uid://cijwyoa0xpef1" path="res://Assets/sound/penjumlahan.wav" id="31_olmhj"]
+[ext_resource type="AudioStream" uid="uid://cfquhrlah7v7a" path="res://Assets/sound/tebak_huruf.wav" id="32_27gb6"]
+[ext_resource type="AudioStream" uid="uid://chpu0pqj2omcc" path="res://Assets/sound/merangkai_kalimat.wav" id="33_ijfn2"]
+
+[node name="MenuBermain" type="Node2D"]
+script = ExtResource("1_db3o2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 146.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xawga")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="Panel" parent="CanvasLayer"]
+visible = false
+offset_left = 29.0
+offset_top = 162.0
+offset_right = 538.0
+offset_bottom = 583.0
+theme = ExtResource("3_al6ck")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 148.0
+offset_right = 23.0
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Kembali" type="TextureButton" parent="CanvasLayer"]
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 128.0
+offset_bottom = 133.0
+focus_neighbor_right = NodePath("../PanelContainer/MarginContainer/Container/ContainerBelajar/Button")
+focus_neighbor_bottom = NodePath("../PanelContainer/MarginContainer/Container/ContainerBelajar/Button")
+texture_normal = ExtResource("3_1qn1a")
+texture_pressed = ExtResource("4_wpuao")
+stretch_mode = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -386.0
+offset_top = -286.0
+offset_right = 386.0
+offset_bottom = 287.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_51q8b")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 80
+
+[node name="Container" type="VBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/Container"]
+layout_mode = 2
+
+[node name="TextBelajar" type="RichTextLabel" parent="CanvasLayer/PanelContainer/MarginContainer/Container"]
+visible = false
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.470588, 0.321569, 0.435294, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("5_mw4rg")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]BELAJAR[/center]"
+
+[node name="ContainerBelajar" type="HBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer/Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+alignment = 1
+
+[node name="Button" type="TextureButton" parent="CanvasLayer/PanelContainer/MarginContainer/Container/ContainerBelajar"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../Button2")
+focus_neighbor_top = NodePath("../../../../../Kembali")
+focus_neighbor_right = NodePath("../Button2")
+focus_neighbor_bottom = NodePath("../../ContainerBermain/angkabtn")
+texture_normal = ExtResource("6_wo44f")
+texture_pressed = ExtResource("7_bsvpy")
+texture_hover = ExtResource("8_kuo2t")
+texture_focused = ExtResource("8_kuo2t")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button2" type="TextureButton" parent="CanvasLayer/PanelContainer/MarginContainer/Container/ContainerBelajar"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../Button")
+focus_neighbor_top = NodePath("../../../../../Kembali")
+focus_neighbor_right = NodePath("../Button")
+focus_neighbor_bottom = NodePath("../../ContainerBermain/hurufbtn")
+texture_normal = ExtResource("9_0hwe8")
+texture_pressed = ExtResource("10_ca7cs")
+texture_hover = ExtResource("11_58idf")
+texture_focused = ExtResource("11_58idf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextBermain" type="RichTextLabel" parent="CanvasLayer/PanelContainer/MarginContainer/Container"]
+visible = false
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.470588, 0.321569, 0.435294, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("5_mw4rg")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]BERMAIN[/center]"
+
+[node name="ContainerBermain" type="HBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer/Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="angkabtn" type="TextureButton" parent="CanvasLayer/PanelContainer/MarginContainer/Container/ContainerBermain"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../hurufbtn")
+focus_neighbor_top = NodePath("../../ContainerBelajar/Button")
+focus_neighbor_right = NodePath("../hurufbtn")
+theme = ExtResource("14_qiqex")
+texture_normal = ExtResource("15_st614")
+texture_pressed = ExtResource("16_h301p")
+texture_hover = ExtResource("17_wqltu")
+texture_focused = ExtResource("17_wqltu")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="hurufbtn" type="TextureButton" parent="CanvasLayer/PanelContainer/MarginContainer/Container/ContainerBermain"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../angkabtn")
+focus_neighbor_top = NodePath("../../ContainerBelajar/Button2")
+focus_neighbor_right = NodePath("../angkabtn")
+texture_normal = ExtResource("18_2h6pc")
+texture_pressed = ExtResource("19_edqjt")
+texture_hover = ExtResource("20_73neh")
+texture_focused = ExtResource("20_73neh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer/Container"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer/Container"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Container" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 148.0
+offset_top = 25.0
+offset_right = 1132.0
+offset_bottom = 622.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = -1
+
+[node name="PanelBelajar" type="PanelContainer" parent="CanvasLayer/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("7_51q8b")
+theme_type_variation = &"PanelDua"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Container/PanelBelajar"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 15
+
+[node name="ContainerBelajar" type="VBoxContainer" parent="CanvasLayer/Container/PanelBelajar/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="TextBelajar" type="RichTextLabel" parent="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.470588, 0.321569, 0.435294, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("5_mw4rg")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]BELAJAR[/center]"
+scroll_active = false
+
+[node name="ContainerBelajar" type="HBoxContainer" parent="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Container2" type="Container" parent="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ContainerAngka" type="VBoxContainer" parent="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../../../../../../Kembali")
+focus_neighbor_top = NodePath("../../../../../../Kembali")
+focus_neighbor_right = NodePath("../../../../../../PanelContainer/MarginContainer/Container/ContainerBelajar/Button2")
+theme_override_constants/separation = 10
+
+[node name="Button" type="TextureButton" parent="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerAngka"]
+custom_minimum_size = Vector2(200, 170)
+layout_mode = 2
+size_flags_vertical = 3
+focus_neighbor_left = NodePath("../../ContainerHuruf/Button2")
+focus_neighbor_right = NodePath("../../ContainerHuruf/Button2")
+focus_neighbor_bottom = NodePath("../../../../../../PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerAngka2/angkabtn")
+texture_normal = ExtResource("6_wo44f")
+texture_pressed = ExtResource("7_bsvpy")
+texture_hover = ExtResource("8_kuo2t")
+texture_focused = ExtResource("8_kuo2t")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerAngka"]
+layout_mode = 2
+theme = ExtResource("14_qiqex")
+text = "Mengenal Angka"
+horizontal_alignment = 1
+
+[node name="ContainerHuruf" type="VBoxContainer" parent="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="Button2" type="TextureButton" parent="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerHuruf"]
+custom_minimum_size = Vector2(200, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_neighbor_left = NodePath("../../ContainerAngka/Button")
+focus_neighbor_top = NodePath("../../../../../../../Kembali")
+focus_neighbor_bottom = NodePath("../../../../../../PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerHuruf2/hurufbtn")
+texture_normal = ExtResource("9_0hwe8")
+texture_pressed = ExtResource("10_ca7cs")
+texture_hover = ExtResource("11_58idf")
+texture_focused = ExtResource("11_58idf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerHuruf"]
+layout_mode = 2
+theme = ExtResource("14_qiqex")
+text = "Mengenal Huruf"
+horizontal_alignment = 1
+
+[node name="Container" type="Container" parent="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PanelBermain" type="PanelContainer" parent="CanvasLayer/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("7_51q8b")
+theme_type_variation = &"PanelTiga"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Container/PanelBermain"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 15
+
+[node name="ContainerBermain" type="VBoxContainer" parent="CanvasLayer/Container/PanelBermain/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextBermain" type="RichTextLabel" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.470588, 0.321569, 0.435294, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/normal_font = ExtResource("5_mw4rg")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]BERMAIN[/center]"
+
+[node name="ContainerBermain" type="HBoxContainer" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+theme_override_constants/separation = 25
+
+[node name="ContainerAngka3" type="VBoxContainer" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="angkabtn" type="TextureButton" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerAngka3"]
+custom_minimum_size = Vector2(200, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_neighbor_top = NodePath("../../../../../../PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerAngka/Button")
+focus_neighbor_right = NodePath("../../ContainerAngka2/angkabtn")
+theme = ExtResource("14_qiqex")
+texture_normal = ExtResource("21_o7214")
+texture_pressed = ExtResource("16_h301p")
+texture_hover = ExtResource("17_wqltu")
+texture_focused = ExtResource("17_wqltu")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerAngka3"]
+layout_mode = 2
+theme = ExtResource("14_qiqex")
+text = "Tebak Angka"
+horizontal_alignment = 1
+
+[node name="ContainerAngka2" type="VBoxContainer" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="angkabtn" type="TextureButton" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerAngka2"]
+custom_minimum_size = Vector2(200, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_neighbor_left = NodePath("../../ContainerAngka3/angkabtn")
+focus_neighbor_top = NodePath("../../../../../../PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerAngka/Button")
+focus_neighbor_right = NodePath("../../ContainerHuruf3/hurufbtn")
+theme = ExtResource("14_qiqex")
+texture_normal = ExtResource("22_8cxb1")
+texture_pressed = ExtResource("23_af33x")
+texture_hover = ExtResource("24_6vree")
+texture_focused = ExtResource("24_6vree")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerAngka2"]
+layout_mode = 2
+theme = ExtResource("14_qiqex")
+text = "Penjumlahan"
+horizontal_alignment = 1
+
+[node name="ContainerHuruf3" type="VBoxContainer" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="hurufbtn" type="TextureButton" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerHuruf3"]
+custom_minimum_size = Vector2(200, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_neighbor_left = NodePath("../../ContainerAngka2/angkabtn")
+focus_neighbor_top = NodePath("../../../../../../PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerHuruf/Button2")
+focus_neighbor_right = NodePath("../../ContainerHuruf2/hurufbtn")
+texture_normal = ExtResource("18_2h6pc")
+texture_pressed = ExtResource("19_edqjt")
+texture_hover = ExtResource("20_73neh")
+texture_focused = ExtResource("20_73neh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerHuruf3"]
+layout_mode = 2
+theme = ExtResource("14_qiqex")
+text = "Tebak Huruf"
+horizontal_alignment = 1
+
+[node name="ContainerHuruf2" type="VBoxContainer" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="hurufbtn" type="TextureButton" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerHuruf2"]
+custom_minimum_size = Vector2(200, 170)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_neighbor_left = NodePath("../../ContainerHuruf3/hurufbtn")
+focus_neighbor_top = NodePath("../../../../../../PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerHuruf/Button2")
+texture_normal = ExtResource("25_r7nhw")
+texture_pressed = ExtResource("26_rigi0")
+texture_hover = ExtResource("27_8j3xr")
+texture_focused = ExtResource("27_8j3xr")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerHuruf2"]
+layout_mode = 2
+theme = ExtResource("14_qiqex")
+text = "Tebak Kalimat"
+horizontal_alignment = 1
+
+[node name="BelajarAngka" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("28_umrqg")
+volume_db = 5.0
+pitch_scale = 1.34
+
+[node name="BelajarHuruf" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("29_3ij6i")
+volume_db = 5.0
+pitch_scale = 1.34
+
+[node name="BermainAngka1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("30_bl7m0")
+volume_db = 5.0
+pitch_scale = 1.34
+
+[node name="BermainAngka2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("31_olmhj")
+volume_db = 5.0
+pitch_scale = 1.34
+
+[node name="BermainHuruf1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("32_27gb6")
+volume_db = 5.0
+pitch_scale = 1.34
+
+[node name="BermainHuruf2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("33_ijfn2")
+volume_db = 5.0
+pitch_scale = 1.34
+
+[connection signal="pressed" from="CanvasLayer/Kembali" to="." method="_on_kembali_pressed"]
+[connection signal="button_down" from="CanvasLayer/PanelContainer/MarginContainer/Container/ContainerBelajar/Button" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/Container/ContainerBelajar/Button" to="." method="_on_button_pressed"]
+[connection signal="button_down" from="CanvasLayer/PanelContainer/MarginContainer/Container/ContainerBelajar/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/Container/ContainerBelajar/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="button_down" from="CanvasLayer/PanelContainer/MarginContainer/Container/ContainerBermain/angkabtn" to="." method="_on_angkabtn_button_down"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/Container/ContainerBermain/angkabtn" to="." method="_on_angkabtn_pressed"]
+[connection signal="button_down" from="CanvasLayer/PanelContainer/MarginContainer/Container/ContainerBermain/hurufbtn" to="." method="_on_hurufbtn_button_down"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/Container/ContainerBermain/hurufbtn" to="." method="_on_hurufbtn_pressed"]
+[connection signal="button_down" from="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerAngka/Button" to="." method="_on_button_button_down"]
+[connection signal="focus_entered" from="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerAngka/Button" to="." method="_on_button_focus_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerAngka/Button" to="." method="_on_button_focus_entered"]
+[connection signal="pressed" from="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerAngka/Button" to="." method="_on_button_pressed"]
+[connection signal="button_down" from="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerHuruf/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="focus_entered" from="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerHuruf/Button2" to="." method="_on_button_2_focus_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerHuruf/Button2" to="." method="_on_button_2_focus_entered"]
+[connection signal="pressed" from="CanvasLayer/Container/PanelBelajar/MarginContainer/ContainerBelajar/ContainerBelajar/ContainerHuruf/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="button_down" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerAngka3/angkabtn" to="." method="_on_angkabtn_button_down"]
+[connection signal="focus_entered" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerAngka3/angkabtn" to="." method="_on_angkabtn_focus_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerAngka3/angkabtn" to="." method="_on_angkabtn_focus_entered"]
+[connection signal="pressed" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerAngka3/angkabtn" to="." method="_on_angkabtn_pressed"]
+[connection signal="button_down" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerAngka2/angkabtn" to="." method="_on_angkabtn2_button_down"]
+[connection signal="focus_entered" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerAngka2/angkabtn" to="." method="_on_angkabtn2_focus_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerAngka2/angkabtn" to="." method="_on_angkabtn2_focus_entered"]
+[connection signal="pressed" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerAngka2/angkabtn" to="." method="_on_angkabtn2_pressed"]
+[connection signal="button_down" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerHuruf3/hurufbtn" to="." method="_on_hurufbtn_button_down"]
+[connection signal="focus_entered" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerHuruf3/hurufbtn" to="." method="_on_hurufbtn_focus_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerHuruf3/hurufbtn" to="." method="_on_hurufbtn_focus_entered"]
+[connection signal="pressed" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerHuruf3/hurufbtn" to="." method="_on_hurufbtn_pressed"]
+[connection signal="button_down" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerHuruf2/hurufbtn" to="." method="_on_hurufbtn2_button_down"]
+[connection signal="focus_entered" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerHuruf2/hurufbtn" to="." method="_on_hurufbtn2_focus_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerHuruf2/hurufbtn" to="." method="_on_hurufbtn2_focus_entered"]
+[connection signal="pressed" from="CanvasLayer/Container/PanelBermain/MarginContainer/ContainerBermain/ContainerBermain/ContainerHuruf2/hurufbtn" to="." method="_on_hurufbtn2_pressed"]

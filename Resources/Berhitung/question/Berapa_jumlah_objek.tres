@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bwoyjy7c3asla"]
+
+[ext_resource type="Script" path="res://scripts/Resources/question.gd" id="1_k8gma"]
+
+[resource]
+script = ExtResource("1_k8gma")
+Question_Info = "Berapa jumlah Obejk?"
+type = 0
+option = Array[String](["3", "5", "4"])
+correct = "4"

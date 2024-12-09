@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4qm6vuwb083h"]
+
+[ext_resource type="Script" path="res://Heart/heart_gui.gd" id="1_iy4qb"]
+[ext_resource type="Texture2D" uid="uid://debn2j3suibqj" path="res://Assets/GUI/grass/Icons/Heart.png" id="2_4i7gh"]
+
+[node name="HeartGUI" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(67.2, 59.2)
+anchors_preset = -1
+anchor_right = 0.058
+anchor_bottom = 0.091
+offset_right = 0.383995
+offset_bottom = 0.231998
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_iy4qb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(34, 28)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_4i7gh")

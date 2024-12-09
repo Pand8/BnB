@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8is7myaeshtd"]
+
+[ext_resource type="Texture2D" uid="uid://gvkdwku82ma1" path="res://Assets/apple.png" id="1_fpetp"]
+[ext_resource type="Script" path="res://Object/object.gd" id="1_imi48"]
+[ext_resource type="Script" path="res://Object/Sprite2D2.gd" id="3_36wy5"]
+[ext_resource type="Texture2D" uid="uid://d8h6inlfgq44" path="res://Assets/fruit sprites/pngs/watermelon.png" id="4_o57mx"]
+
+[node name="object" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(83, 73)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1069.0
+offset_bottom = -575.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_imi48")
+
+[node name="Sprite2D" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_right = 478.0
+offset_bottom = 513.0
+scale = Vector2(0.144531, 0.144531)
+texture = ExtResource("1_fpetp")
+expand_mode = 1
+
+[node name="Sprite2D2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 0.999996
+offset_right = 889.0
+offset_bottom = 961.0
+scale = Vector2(0.0765766, 0.0765766)
+script = ExtResource("3_36wy5")
+
+[node name="Sprite2D3" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -11.0
+offset_top = 27.0
+offset_right = 526.0
+offset_bottom = 508.0
+rotation = -0.523599
+scale = Vector2(0.144531, 0.144531)
+texture = ExtResource("4_o57mx")
+expand_mode = 1
