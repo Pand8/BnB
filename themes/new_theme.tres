@@ -1,0 +1,91 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://cjqyyjxxa2fyl"]
+
+[ext_resource type="FontFile" uid="uid://bn4v25tysqslj" path="res://Assets/GUI/grass/Font for text/Gluten/static/Gluten-Bold.ttf" id="1_3f7rv"]
+[ext_resource type="Texture2D" uid="uid://bpi6uhdrhs3tw" path="res://Assets/GUI/Math Game Assets/GUI/Panel.png" id="2_nal7o"]
+
+[sub_resource type="FontVariation" id="FontVariation_u8vuy"]
+base_font = ExtResource("1_3f7rv")
+spacing_top = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqwes"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.454902, 0.333333, 0.45098, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsihl"]
+bg_color = Color(0.109804, 0.560784, 0.839216, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.454902, 0.333333, 0.45098, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtvxd"]
+bg_color = Color(0.109804, 0.560784, 0.839216, 1)
+border_width_bottom = 20
+border_color = Color(0.0588235, 0.454902, 0.690196, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfosm"]
+bg_color = Color(0.109804, 0.560784, 0.839216, 1)
+border_width_top = 20
+border_color = Color(0.0588235, 0.454902, 0.690196, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae6e"]
+bg_color = Color(0.533333, 0.890196, 0.968627, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.227451, 0.431373, 0.866667, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_duhl1"]
+texture = ExtResource("2_nal7o")
+
+[resource]
+default_font = SubResource("FontVariation_u8vuy")
+default_font_size = 50
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+Button/font_sizes/font_size = 35
+Button/fonts/font = SubResource("FontVariation_u8vuy")
+Button/styles/focus = SubResource("StyleBoxFlat_pqwes")
+Button/styles/hover = SubResource("StyleBoxFlat_fsihl")
+Button/styles/normal = SubResource("StyleBoxFlat_qtvxd")
+Button/styles/pressed = SubResource("StyleBoxFlat_xfosm")
+Panel/styles/panel = SubResource("StyleBoxFlat_mae6e")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_duhl1")
+RichTextLabel/colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+RichTextLabel/constants/outline_size = 20
+RichTextLabel/font_sizes/normal_font_size = 80

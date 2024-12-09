@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://n8dd1i1ciggi"]
+
+[ext_resource type="Texture2D" uid="uid://1ajd3n7n25c8" path="res://Assets/GUI/custom/button_bermain1.png" id="1_8xeyj"]
+[ext_resource type="FontFile" uid="uid://bn4v25tysqslj" path="res://Assets/GUI/grass/Font for text/Gluten/static/Gluten-Bold.ttf" id="1_pxe1h"]
+[ext_resource type="FontFile" uid="uid://gbylwftmi3io" path="res://Assets/GUI/Math Game Assets/Eazy Chat/Eazy Chat.ttf" id="2_e5mop"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bi20"]
+texture = ExtResource("1_8xeyj")
+
+[resource]
+Button/styles/normal = SubResource("StyleBoxTexture_6bi20")
+Label/font_sizes/font_size = 25
+Label/fonts/font = ExtResource("2_e5mop")
+RichTextLabel/colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+RichTextLabel/constants/outline_size = 8
+RichTextLabel/font_sizes/normal_font_size = 29
+RichTextLabel/fonts/normal_font = ExtResource("1_pxe1h")

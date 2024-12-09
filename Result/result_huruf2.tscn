@@ -1,0 +1,350 @@
+[gd_scene load_steps=13 format=3 uid="uid://bijiaikdek31e"]
+
+[ext_resource type="Script" path="res://Result/result_huruf2.gd" id="1_0k5fe"]
+[ext_resource type="Texture2D" uid="uid://8jq65on88w0j" path="res://Assets/GUI/grass/Backgound/Background_pink.png" id="2_od5be"]
+[ext_resource type="Texture2D" uid="uid://cc7yqt5mlxhka" path="res://Assets/star.png" id="3_ey28k"]
+[ext_resource type="Theme" uid="uid://c7sd3381we7ys" path="res://themes/content_angka1.tres" id="4_fu3vj"]
+[ext_resource type="FontFile" uid="uid://bn4v25tysqslj" path="res://Assets/GUI/grass/Font for text/Gluten/static/Gluten-Bold.ttf" id="5_f5vqf"]
+[ext_resource type="Texture2D" uid="uid://debn2j3suibqj" path="res://Assets/GUI/grass/Icons/Heart.png" id="6_41fqm"]
+[ext_resource type="Theme" uid="uid://cjqyyjxxa2fyl" path="res://themes/new_theme.tres" id="7_3d216"]
+[ext_resource type="Theme" uid="uid://yaamyeiov35p" path="res://themes/content_angka2.tres" id="8_x0lkg"]
+[ext_resource type="PackedScene" uid="uid://rya4g1xt6fqm" path="res://Result/leader_board.tscn" id="9_ddse0"]
+[ext_resource type="Texture2D" uid="uid://c1wgyn26h5mfu" path="res://Assets/maskot.png" id="10_xmm6g"]
+[ext_resource type="Texture2D" uid="uid://b45qfwgn60eq" path="res://Assets/bubble.png" id="11_xx8t8"]
+[ext_resource type="AudioStream" uid="uid://c7aaxhgsnfpy0" path="res://Assets/sound/applause-cheer-236786.mp3" id="12_ndig6"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_0k5fe")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_od5be")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 899.0
+offset_top = 77.0
+offset_right = -92.0
+offset_bottom = -427.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_ey28k")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 64.0
+offset_right = 1126.0
+offset_bottom = 624.0
+theme_override_constants/separation = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer"]
+custom_minimum_size = Vector2(545, 480)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+theme_override_constants/separation = 30
+
+[node name="TextureRect4" type="PanelContainer" parent="Control/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_fu3vj")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/VBoxContainer/TextureRect4"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.470588, 0.321569, 0.435294, 1)
+theme_override_colors/font_outline_color = Color(0.470588, 0.321569, 0.435294, 1)
+theme_override_fonts/normal_font = ExtResource("5_f5vqf")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center][/center]"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.470588, 0.321569, 0.435294, 1)
+theme_override_colors/font_outline_color = Color(0.470588, 0.321569, 0.435294, 1)
+theme_override_fonts/normal_font = ExtResource("5_f5vqf")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]KAMU MENDAPATKAN[/center]"
+fit_content = true
+scroll_active = false
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HSplitContainer2" type="HBoxContainer" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 11
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer2/HSplitContainer2"]
+visible = false
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("6_41fqm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer2/HSplitContainer2"]
+visible = false
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("6_41fqm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer2/HSplitContainer2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("6_41fqm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer2/HSplitContainer2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("6_41fqm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer2/HSplitContainer2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("6_41fqm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HSplitContainer3" type="HBoxContainer" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 11
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer2/HSplitContainer3"]
+visible = false
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("6_41fqm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer2/HSplitContainer3"]
+visible = false
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("6_41fqm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer2/HSplitContainer3"]
+visible = false
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("6_41fqm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer2/HSplitContainer3"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("6_41fqm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer2/HSplitContainer3"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("6_41fqm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(320, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/HBoxContainer/VBoxContainer/TextureRect4/MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(320, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="Control/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_constants/separation = 43
+
+[node name="Button2" type="Button" parent="Control/HBoxContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("7_3d216")
+theme_override_font_sizes/font_size = 35
+text = "Main lagi"
+clip_text = true
+
+[node name="Button" type="Button" parent="Control/HBoxContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("8_x0lkg")
+text = "Kembali
+ke Menu"
+clip_text = true
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="LeaderBoard" parent="Control/HBoxContainer" instance=ExtResource("9_ddse0")]
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Control"]
+visible = false
+clip_contents = false
+layout_mode = 2
+anchor_left = 0.293
+anchor_top = 0.115
+anchor_right = 0.975
+anchor_bottom = 0.685
+offset_left = 9.46399
+offset_top = 203.48
+offset_right = -580.2
+offset_bottom = -9.88
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.470588, 0.321569, 0.435294, 1)
+theme_override_colors/font_outline_color = Color(0.470588, 0.321569, 0.435294, 1)
+theme_override_constants/shadow_outline_size = 24
+theme_override_constants/line_separation = 19
+theme_override_constants/outline_size = 44
+theme_override_fonts/normal_font = ExtResource("5_f5vqf")
+theme_override_font_sizes/normal_font_size = 132
+bbcode_enabled = true
+text = "[center]5[/center]
+"
+fit_content = true
+scroll_active = false
+
+[node name="TextureRect4" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -97.0
+offset_top = -410.0
+offset_right = 298.0
+offset_bottom = 75.0
+grow_vertical = 0
+size_flags_horizontal = 3
+texture = ExtResource("10_xmm6g")
+expand_mode = 3
+stretch_mode = 4
+flip_h = true
+
+[node name="ColorRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 327.0
+offset_bottom = 246.0
+texture = ExtResource("11_xx8t8")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/ColorRect"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 46.0
+offset_top = 61.0
+offset_right = -44.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.470588, 0.321569, 0.435294, 1)
+theme_override_colors/font_outline_color = Color(0.470588, 0.321569, 0.435294, 1)
+theme_override_constants/shadow_outline_size = 18
+theme_override_constants/line_separation = 19
+theme_override_constants/outline_size = 11
+theme_override_fonts/normal_font = ExtResource("5_f5vqf")
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "[center]Anu
+[/center]"
+fit_content = true
+scroll_active = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_ndig6")
+volume_db = 5.0
+pitch_scale = 1.32
+
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/Buttons/Button2" to="." method="_on_button_2_pressed" flags=18]
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/Buttons/Button" to="." method="_on_button_pressed" flags=18]
