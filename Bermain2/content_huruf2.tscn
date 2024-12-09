@@ -1,0 +1,252 @@
+[gd_scene load_steps=14 format=3 uid="uid://bd0wqlma554mm"]
+
+[ext_resource type="Script" path="res://Bermain2/ContentHuruf2.gd" id="1_cuq2h"]
+[ext_resource type="Texture2D" uid="uid://ccimkadpakuu2" path="res://Assets/GUI/Math Game Assets/Timer/Timer.png" id="2_o53h7"]
+[ext_resource type="Theme" uid="uid://c7sd3381we7ys" path="res://themes/content_angka1.tres" id="3_hjddb"]
+[ext_resource type="FontFile" uid="uid://cowdkyyhdjvg6" path="res://Assets/GUI/grass/Font for text/Gluten/static/Gluten-ExtraBold.ttf" id="4_d4305"]
+[ext_resource type="Theme" uid="uid://n8dd1i1ciggi" path="res://themes/font.tres" id="5_tix2q"]
+[ext_resource type="PackedScene" uid="uid://hurw5akhp8qn" path="res://Object/object_container.tscn" id="7_gutag"]
+[ext_resource type="Theme" uid="uid://cjqyyjxxa2fyl" path="res://themes/new_theme.tres" id="8_1gchs"]
+[ext_resource type="Theme" uid="uid://yaamyeiov35p" path="res://themes/content_angka2.tres" id="9_c82mo"]
+[ext_resource type="AudioStream" uid="uid://nivr0mmp0ejj" path="res://Assets/sound/correct.wav" id="11_6qx7m"]
+[ext_resource type="AudioStream" uid="uid://dmar8q4lx441c" path="res://Assets/sound/wrong.wav" id="12_2oa4u"]
+[ext_resource type="AudioStream" uid="uid://bqabvj1pe5qnh" path="res://Assets/sound/benar.wav" id="13_oc06k"]
+[ext_resource type="AudioStream" uid="uid://x76ti8eyxsw1" path="res://Assets/sound/o ow.wav" id="14_7ike4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cx2sw"]
+font_size = 50
+font_color = Color(0.192157, 0.192157, 0.192157, 1)
+
+[node name="ContentHuruf" type="CanvasLayer"]
+script = ExtResource("1_cuq2h")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 91.0
+offset_right = 1131.0
+offset_bottom = 624.0
+theme_override_constants/separation = 16
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 11
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture = ExtResource("2_o53h7")
+expand_mode = 5
+
+[node name="label" type="ProgressBar" parent="Control/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_hjddb")
+max_value = 20.0
+value = 10.0
+fill_mode = 3
+show_percentage = false
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Panel" type="PanelContainer" parent="Control/HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(800, 375)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_hjddb")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/VBoxContainer3/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Pertanyaan" type="RichTextLabel" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+theme_override_colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_fonts/normal_font = ExtResource("4_d4305")
+theme_override_font_sizes/normal_font_size = 42
+theme_override_font_sizes/bold_font_size = 2
+bbcode_enabled = true
+text = "[center]MANA KATA YANG BENAR?[/center]"
+scroll_active = false
+
+[node name="Sprite2D4" type="TextureRect" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+stretch_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="ColorRect" type="Panel" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("8_1gchs")
+theme_type_variation = &"PanelDua"
+
+[node name="Pertanyaan2" type="Label" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+theme = ExtResource("5_tix2q")
+theme_override_colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_font_sizes/font_size = 50
+text = "anu"
+label_settings = SubResource("LabelSettings_cx2sw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="Panel" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("8_1gchs")
+
+[node name="Pertanyaan2" type="Label" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ColorRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+theme = ExtResource("5_tix2q")
+theme_override_colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_font_sizes/font_size = 50
+text = "anu"
+label_settings = SubResource("LabelSettings_cx2sw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect3" type="Panel" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("8_1gchs")
+
+[node name="Pertanyaan2" type="Label" parent="Control/HBoxContainer/VBoxContainer3/Panel/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ColorRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+theme = ExtResource("5_tix2q")
+theme_override_colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_font_sizes/font_size = 50
+text = "anu"
+label_settings = SubResource("LabelSettings_cx2sw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="object_container" parent="Control/HBoxContainer/VBoxContainer3/Panel" instance=ExtResource("7_gutag")]
+visible = false
+layout_mode = 2
+
+[node name="JbuttonContainer2" type="HBoxContainer" parent="Control/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("8_1gchs")
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="jbutton1" type="Button" parent="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../jbutton3")
+focus_neighbor_right = NodePath("../jbutton2")
+focus_next = NodePath("../jbutton2")
+focus_previous = NodePath("../jbutton3")
+theme = ExtResource("8_1gchs")
+theme_override_font_sizes/font_size = 50
+text = "A"
+icon_alignment = 1
+expand_icon = true
+
+[node name="jbutton2" type="Button" parent="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("9_c82mo")
+theme_override_font_sizes/font_size = 50
+text = "U"
+
+[node name="jbutton3" type="Button" parent="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_right = NodePath("../jbutton1")
+focus_next = NodePath("../jbutton1")
+theme = ExtResource("3_hjddb")
+theme_override_font_sizes/font_size = 50
+text = "Z"
+icon_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="LevelTimer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_6qx7m")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_2oa4u")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_oc06k")
+volume_db = 5.0
+pitch_scale = 1.3
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_7ike4")
+volume_db = 5.0
+pitch_scale = 1.34
+
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2/jbutton1" to="." method="_on_jbutton_1_pressed" flags=18]
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2/jbutton2" to="." method="_on_jbutton_2_pressed" flags=18]
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer3/JbuttonContainer2/jbutton3" to="." method="_on_jbutton_3_pressed" flags=18]
+[connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout" flags=18]
