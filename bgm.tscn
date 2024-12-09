@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8yc4tfiadgf0"]
+
+[ext_resource type="AudioStream" uid="uid://874k0jhd3x0l" path="res://Assets/happy-uplifting-ukulele-kids-short-version-217004.mp3" id="1_2iq6q"]
+
+[node name="Control" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_2iq6q")
+autoplay = true

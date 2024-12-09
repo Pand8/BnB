@@ -1,0 +1,84 @@
+Level angka :
+
+level 1-3 = angka scene
+
+random number of object
+random object type
+random correct answer button
+
+---------------------------------------
+level 4-5 = penjumlahan scene 
+
+random left and right number of object
+random correct aswer button
+
+===============================================
+level 1 - 2, 4 :
+
+correct = currentscore += 1
+wrong = currenthearts -= 1
+
+-------------------------
+if button1 pressed :
+	wrong
+if button2 pressed :
+	correct
+if button3 pressed :
+	wrong
+-------------------------
+
+if button2 pressed :
+	run correct
+	run new randomized object scene
+else:
+	run wrong
+
+if currenthearts <= 0 :
+	run gameover scene
+
+==============================================
+level 3 :
+
+correct = currentscore += 1
+wrong = currenthearts -= 1
+
+-------------------------
+if button1 pressed :
+	wrong
+if button2 pressed :
+	correct
+if button3 pressed :
+	wrong
+-------------------------
+
+if button2 pressed :
+	run correct
+	run penjumlahan scene
+else:
+	run wrong
+
+if currenthearts <= 0 :
+	run gameover scene
+================================================
+level 5 :
+
+correct = currentscore += 1
+wrong = currenthearts -= 1
+
+-------------------------
+if button1 pressed :
+	wrong
+if button2 pressed :
+	correct
+if button3 pressed :
+	wrong
+-------------------------
+
+if button2 pressed :
+	run correct
+	run result scene
+else:
+	run wrong
+
+if currenthearts <= 0 :
+	run gameover scene

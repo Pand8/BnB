@@ -1,0 +1,309 @@
+[gd_scene load_steps=14 format=3 uid="uid://d0mbm63hrlrlo"]
+
+[ext_resource type="Texture2D" uid="uid://brklonk77sxyg" path="res://Assets/GUI/grass/Backgound/Background_Blue.png" id="1_favys"]
+[ext_resource type="Texture2D" uid="uid://cn00717p7h86j" path="res://Assets/GUI/grass/Icons/Empty-heart.png" id="2_tlrbi"]
+[ext_resource type="PackedScene" uid="uid://dmftqvrf3ev7o" path="res://Heart/heart_container.tscn" id="3_t8bio"]
+[ext_resource type="Texture2D" uid="uid://debn2j3suibqj" path="res://Assets/GUI/grass/Icons/Heart.png" id="4_l6dbd"]
+[ext_resource type="Texture2D" uid="uid://cf2xpsapq01xv" path="res://Assets/GUI/grass/Menu Buttons/Clear Menu Buttons/Grass-Buttons-arrow3.png" id="5_cmkqp"]
+[ext_resource type="Texture2D" uid="uid://dtvu5wl0hqhci" path="res://Assets/GUI/grass/Menu Buttons/Clear Menu Buttons/Pressed/Buttons-pressed-arrow3.png" id="6_n2cxi"]
+[ext_resource type="Texture2D" uid="uid://ctc4w8oirnay" path="res://Assets/GUI/grass/Bar/Square-2.png" id="7_u2c4p"]
+[ext_resource type="FontFile" uid="uid://cowdkyyhdjvg6" path="res://Assets/GUI/grass/Font for text/Gluten/static/Gluten-ExtraBold.ttf" id="8_3enqv"]
+[ext_resource type="FontFile" uid="uid://cj0k7ielj07b6" path="res://Assets/GUI/grass/Font for text/Gluten/static/Gluten-Black.ttf" id="9_s1j35"]
+[ext_resource type="Texture2D" uid="uid://gvkdwku82ma1" path="res://Assets/apple.png" id="10_rnnic"]
+[ext_resource type="Theme" uid="uid://cjqyyjxxa2fyl" path="res://themes/new_theme.tres" id="11_p8k5v"]
+[ext_resource type="Texture2D" uid="uid://cc7yqt5mlxhka" path="res://Assets/star.png" id="12_mw6nk"]
+[ext_resource type="Texture2D" uid="uid://k18nw1p0jicv" path="res://icon.svg" id="13_wq4ml"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="TextureRect" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_favys")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="HSplitContainer" type="HBoxContainer" parent="Control2"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -373.0
+offset_top = 19.0
+offset_right = 368.0
+offset_bottom = 147.0
+grow_horizontal = 0
+scale = Vector2(0.478606, 0.491232)
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control2/HSplitContainer"]
+layout_mode = 2
+texture = ExtResource("2_tlrbi")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="Control2/HSplitContainer"]
+layout_mode = 2
+texture = ExtResource("2_tlrbi")
+expand_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="Control2/HSplitContainer"]
+layout_mode = 2
+texture = ExtResource("2_tlrbi")
+expand_mode = 3
+
+[node name="TextureRect4" type="TextureRect" parent="Control2/HSplitContainer"]
+layout_mode = 2
+texture = ExtResource("2_tlrbi")
+expand_mode = 3
+
+[node name="TextureRect5" type="TextureRect" parent="Control2/HSplitContainer"]
+layout_mode = 2
+texture = ExtResource("2_tlrbi")
+expand_mode = 3
+
+[node name="HeartContainer" parent="Control2" instance=ExtResource("3_t8bio")]
+layout_mode = 1
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = -61.0001
+offset_top = 26.0
+offset_right = 370.0
+offset_bottom = 99.0
+grow_horizontal = 1
+scale = Vector2(0.8, 0.8)
+
+[node name="HSplitContainer2" type="HBoxContainer" parent="Control2"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -376.729
+offset_top = 20.0
+offset_right = 369.271
+offset_bottom = 144.098
+grow_horizontal = 0
+scale = Vector2(0.478606, 0.491232)
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control2/HSplitContainer2"]
+layout_mode = 2
+texture = ExtResource("4_l6dbd")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="Control2/HSplitContainer2"]
+layout_mode = 2
+texture = ExtResource("4_l6dbd")
+expand_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="Control2/HSplitContainer2"]
+layout_mode = 2
+texture = ExtResource("4_l6dbd")
+expand_mode = 3
+
+[node name="TextureRect4" type="TextureRect" parent="Control2/HSplitContainer2"]
+layout_mode = 2
+texture = ExtResource("4_l6dbd")
+expand_mode = 3
+
+[node name="TextureRect5" type="TextureRect" parent="Control2/HSplitContainer2"]
+layout_mode = 2
+texture = ExtResource("4_l6dbd")
+expand_mode = 3
+
+[node name="Kembali" type="TextureButton" parent="Control2"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 21.0
+offset_right = 132.0
+offset_bottom = 129.0
+texture_normal = ExtResource("5_cmkqp")
+texture_pressed = ExtResource("6_n2cxi")
+stretch_mode = 0
+
+[node name="Panel" type="TextureRect" parent="Control2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -782.0
+offset_top = -201.0
+offset_right = -38.0
+offset_bottom = 178.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("7_u2c4p")
+
+[node name="Label" type="RichTextLabel" parent="Control2/Panel"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -261.0
+offset_top = 66.0
+offset_right = 271.0
+offset_bottom = 104.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/normal_font = ExtResource("8_3enqv")
+theme_override_fonts/bold_font = ExtResource("9_s1j35")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 2
+bbcode_enabled = true
+text = "[center]ADA BERAPA BUAH?[/center]"
+scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2/Panel"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.0
+offset_top = -21.5
+offset_right = 296.0
+offset_bottom = 78.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+alignment = 1
+
+[node name="Sprite2D" type="TextureRect" parent="Control2/Panel/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_rnnic")
+expand_mode = 2
+
+[node name="Sprite2D2" type="TextureRect" parent="Control2/Panel/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_rnnic")
+expand_mode = 2
+
+[node name="Sprite2D3" type="TextureRect" parent="Control2/Panel/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_rnnic")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -773.0
+offset_top = -116.0
+offset_right = -43.0
+offset_bottom = -22.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 10
+theme = ExtResource("11_p8k5v")
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="jbutton1" type="Button" parent="Control2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "5"
+icon_alignment = 1
+expand_icon = true
+
+[node name="jbutton2" type="Button" parent="Control2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "3"
+
+[node name="jbutton3" type="Button" parent="Control2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "2"
+icon_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Control2"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 148.0
+offset_right = 310.0
+offset_bottom = 272.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control2/Panel2"]
+clip_contents = false
+layout_mode = 0
+offset_left = 151.0
+offset_top = 13.0
+offset_right = 215.0
+offset_bottom = 105.0
+theme_override_font_sizes/normal_font_size = 75
+text = "5"
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="Control2/Panel2"]
+offset_left = 18.0
+offset_top = 13.0
+offset_right = 116.0
+offset_bottom = 111.0
+texture = ExtResource("12_mw6nk")
+expand_mode = 1
+
+[node name="Control3" type="CenterContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.500434
+anchor_right = 0.500434
+anchor_bottom = 0.0632716
+offset_left = -114.5
+offset_right = 114.5
+offset_bottom = 52.0
+grow_horizontal = 2
+scale = Vector2(1, 1.16)
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control3"]
+clip_contents = false
+custom_minimum_size = Vector2(0.007, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 1.75
+theme_override_colors/font_outline_color = Color(0.454902, 0.333333, 0.45098, 1)
+theme_override_constants/outline_size = 37
+theme_override_fonts/normal_font = ExtResource("8_3enqv")
+theme_override_font_sizes/normal_font_size = 58
+text = "Level 1"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Karakter" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+scale = Vector2(1.9449, 0.905532)
+
+[node name="Sprite2D" type="Sprite2D" parent="Karakter"]
+position = Vector2(89.9789, -171.17)
+scale = Vector2(1, 3.39924)
+texture = ExtResource("13_wq4ml")
