@@ -1,0 +1,245 @@
+[gd_scene load_steps=31 format=3 uid="uid://c5v80cubgfr8t"]
+
+[ext_resource type="Script" path="res://Belajar/belajar_huruf.gd" id="1_1uxcc"]
+[ext_resource type="Texture2D" uid="uid://dkpyhabw3ciy8" path="res://Assets/240_F_207184271_KGYtC1btjugpk0O6CVJSKnDI7BZ8PXkZ.jpg" id="2_r8dfg"]
+[ext_resource type="Texture2D" uid="uid://cf2xpsapq01xv" path="res://Assets/GUI/grass/Menu Buttons/Clear Menu Buttons/Grass-Buttons-arrow3.png" id="3_va6q8"]
+[ext_resource type="Texture2D" uid="uid://dtvu5wl0hqhci" path="res://Assets/GUI/grass/Menu Buttons/Clear Menu Buttons/Pressed/Buttons-pressed-arrow3.png" id="4_h2p8r"]
+[ext_resource type="Theme" uid="uid://c7sd3381we7ys" path="res://themes/content_angka1.tres" id="5_1l21p"]
+[ext_resource type="Texture2D" uid="uid://cenktahotes34" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_C.png" id="6_br7wn"]
+[ext_resource type="Texture2D" uid="uid://bt36qkjfsxq4a" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_D.png" id="7_muru5"]
+[ext_resource type="Texture2D" uid="uid://bu2o2eg3v26h2" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_E.png" id="8_3al13"]
+[ext_resource type="Texture2D" uid="uid://d1eo658sks844" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_F.png" id="9_twmcj"]
+[ext_resource type="Texture2D" uid="uid://djxnivvf8gbfh" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_G.png" id="10_e1n0h"]
+[ext_resource type="Script" path="res://Belajar/TextureButton.gd" id="11_0fs58"]
+[ext_resource type="Texture2D" uid="uid://bu1adoallplcm" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_H.png" id="11_450d6"]
+[ext_resource type="Texture2D" uid="uid://6o1yvswdl31j" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_I.png" id="12_a6h1k"]
+[ext_resource type="Texture2D" uid="uid://cpu3vld5gwxxc" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_J.png" id="13_hu8p3"]
+[ext_resource type="Texture2D" uid="uid://bu8nmp4g32jya" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_K.png" id="14_y23bm"]
+[ext_resource type="Texture2D" uid="uid://ct4ck5yix0kd3" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_L.png" id="15_2uoru"]
+[ext_resource type="Texture2D" uid="uid://ca8rgqpqpsj46" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_M.png" id="16_08psd"]
+[ext_resource type="Texture2D" uid="uid://e0ed844nxb5b" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_n.png" id="17_kj8ui"]
+[ext_resource type="Texture2D" uid="uid://bulhk0k3urhsl" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_O.png" id="18_twbcj"]
+[ext_resource type="Texture2D" uid="uid://xu27htgnsl1o" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_P.png" id="19_agxtt"]
+[ext_resource type="Texture2D" uid="uid://cpnv8r26cl2ui" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_Q.png" id="20_a5tak"]
+[ext_resource type="Texture2D" uid="uid://dwoyeivi2n6j6" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_R.png" id="21_24cag"]
+[ext_resource type="Texture2D" uid="uid://c1uqnc1m03sp3" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_S.png" id="22_dab54"]
+[ext_resource type="Texture2D" uid="uid://dgpra1djm8s8j" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_T.png" id="23_sip2a"]
+[ext_resource type="Texture2D" uid="uid://dtwa4a8p5qmsn" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_U.png" id="24_lldy0"]
+[ext_resource type="Texture2D" uid="uid://iie5pcbxxb8c" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_V.png" id="25_tcufi"]
+[ext_resource type="Texture2D" uid="uid://bu4h2msgvjo0i" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_W.png" id="26_jrbgg"]
+[ext_resource type="Texture2D" uid="uid://dhgdsyqdilqir" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_X.png" id="27_35e1p"]
+[ext_resource type="Texture2D" uid="uid://r7b70ld8d818" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_Y.png" id="28_g46x4"]
+[ext_resource type="Texture2D" uid="uid://l27badq7n85j" path="res://Assets/GUI/Math Game Assets/123 - abc/Block_Z.png" id="29_d2naa"]
+
+[node name="belajar_huruf" type="Node2D"]
+script = ExtResource("1_1uxcc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_r8dfg")
+expand_mode = 1
+
+[node name="KembaliButton" type="TextureButton" parent="CanvasLayer"]
+custom_minimum_size = Vector2(120, 120)
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 143.0
+offset_bottom = 120.0
+texture_normal = ExtResource("3_va6q8")
+texture_pressed = ExtResource("4_h2p8r")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 83.0
+offset_top = 221.0
+offset_right = 421.0
+offset_bottom = 573.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 155.0
+offset_top = 30.0
+offset_right = 1122.0
+offset_bottom = 620.0
+theme = ExtResource("5_1l21p")
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(720, 400)
+offset_left = 215.0
+offset_top = 67.0
+offset_right = 1067.0
+offset_bottom = 559.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 7
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+visible = false
+offset_left = 229.0
+offset_top = 90.0
+offset_right = 1059.0
+offset_bottom = 601.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Grid" type="GridContainer" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -385.0
+offset_top = -253.0
+offset_right = 2737.0
+offset_bottom = 1477.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.287966, 0.287966)
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 42
+theme_override_constants/v_separation = 30
+columns = 7
+
+[node name="TextureButton" type="Button" parent="CanvasLayer/Grid"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 232
+action_mode = 0
+text = "A"
+script = ExtResource("11_0fs58")
+
+[node name="TextureButton2" type="Button" parent="CanvasLayer/Grid"]
+layout_mode = 2
+
+[node name="TextureButton3" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("6_br7wn")
+stretch_mode = 0
+
+[node name="TextureButton4" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("7_muru5")
+stretch_mode = 0
+
+[node name="TextureButton5" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("8_3al13")
+stretch_mode = 0
+
+[node name="TextureButton6" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("9_twmcj")
+stretch_mode = 0
+
+[node name="TextureButton7" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("10_e1n0h")
+stretch_mode = 0
+
+[node name="TextureButton8" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("11_450d6")
+
+[node name="TextureButton9" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("12_a6h1k")
+
+[node name="TextureButton10" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("13_hu8p3")
+
+[node name="TextureButton11" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("14_y23bm")
+
+[node name="TextureButton12" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("15_2uoru")
+
+[node name="TextureButton13" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("16_08psd")
+
+[node name="TextureButton14" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("17_kj8ui")
+
+[node name="TextureButton15" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("18_twbcj")
+
+[node name="TextureButton16" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("19_agxtt")
+
+[node name="TextureButton17" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("20_a5tak")
+
+[node name="TextureButton18" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("21_24cag")
+
+[node name="TextureButton19" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("22_dab54")
+
+[node name="TextureButton20" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("23_sip2a")
+
+[node name="TextureButton21" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("24_lldy0")
+
+[node name="TextureButton28" type="ColorRect" parent="CanvasLayer/Grid"]
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TextureButton22" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("25_tcufi")
+
+[node name="TextureButton23" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("26_jrbgg")
+
+[node name="TextureButton24" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("27_35e1p")
+
+[node name="TextureButton25" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("28_g46x4")
+
+[node name="TextureButton26" type="TextureButton" parent="CanvasLayer/Grid"]
+layout_mode = 2
+texture_normal = ExtResource("29_d2naa")
+
+[node name="TextureButton27" type="ColorRect" parent="CanvasLayer/Grid"]
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CanvasLayer"]
+volume_db = 10.0
+pitch_scale = 1.39
+
+[connection signal="pressed" from="CanvasLayer/KembaliButton" to="." method="_on_kembali_button_pressed"]
+[connection signal="button_up" from="CanvasLayer/Grid/TextureButton" to="CanvasLayer/Grid/TextureButton" method="_on_button_up"]
+[connection signal="pressed" from="CanvasLayer/Grid/TextureButton" to="CanvasLayer/Grid/TextureButton" method="_on_pressed"]
